@@ -1,43 +1,43 @@
 ﻿Entity,Code,Year,Age Group,Percentage (%)
-Africa,,2020,Ages <13,1.2718359
-Africa,,2020,Ages 13-19,14.229228
-Africa,,2020,Ages 20-29,22.26465
-Africa,,2020,Ages 30-39,16.80309
-Africa,,2020,Ages ≥40,2.7064757
-Africa,,2020,Don't know/Refused,42.724724
-Asia,,2020,Ages <13,7.7953706
-Asia,,2020,Ages 13-19,9.628078
-Asia,,2020,Ages 20-29,23.403633
-Asia,,2020,Ages 30-39,12.663021
-Asia,,2020,Ages ≥40,9.983976
-Asia,,2020,Don't know/Refused,36.525925
-Europe,,2020,Ages <13,9.083381
-Europe,,2020,Ages 13-19,22.210781
-Europe,,2020,Ages 20-29,22.034777
-Europe,,2020,Ages 30-39,7.6283197
-Europe,,2020,Ages ≥40,24.53128
-Europe,,2020,Don't know/Refused,14.511458
-High-income countries,,2020,Ages <13,2.473921
-High-income countries,,2020,Ages 13-19,24.484507
-High-income countries,,2020,Ages 20-29,10.832585
-High-income countries,,2020,Ages 30-39,16.975899
-High-income countries,,2020,Ages ≥40,16.11568
-High-income countries,,2020,Don't know/Refused,29.117413
-Lower-middle-income countries,,2020,Ages <13,8.800553
-Lower-middle-income countries,,2020,Ages 13-19,8.485406
-Lower-middle-income countries,,2020,Ages 20-29,26.288944
-Lower-middle-income countries,,2020,Ages 30-39,8.428943
-Lower-middle-income countries,,2020,Ages ≥40,7.3487206
-Lower-middle-income countries,,2020,Don't know/Refused,40.647434
-Upper-middle-income countries,,2020,Ages <13,6.5811706
-Upper-middle-income countries,,2020,Ages 13-19,14.341692
-Upper-middle-income countries,,2020,Ages 20-29,16.935555
-Upper-middle-income countries,,2020,Ages 30-39,18.964176
-Upper-middle-income countries,,2020,Ages ≥40,18.10031
-Upper-middle-income countries,,2020,Don't know/Refused,25.077103
-World,OWID_WRL,2020,Ages <13,7.5053473
-World,OWID_WRL,2020,Ages 13-19,11.454613
-World,OWID_WRL,2020,Ages 20-29,22.213495
-World,OWID_WRL,2020,Ages 30-39,12.515957
-World,OWID_WRL,2020,Ages ≥40,11.407292
-World,OWID_WRL,2020,Don't know/Refused,34.903294
+Africa,,2020,<13,1.2718359
+Africa,,2020,13-19,14.229228
+Africa,,2020,20-29,22.26465
+Africa,,2020,30-39,16.80309
+Africa,,2020,≥40,2.7064757
+Africa,,2020,Don't know,42.724724
+Asia,,2020,<13,7.7953706
+Asia,,2020,13-19,9.628078
+Asia,,2020,20-29,23.403633
+Asia,,2020,30-39,12.663021
+Asia,,2020,≥40,9.983976
+Asia,,2020,Don't know,36.525925
+Europe,,2020,<13,9.083381
+Europe,,2020,13-19,22.210781
+Europe,,2020,20-29,22.034777
+Europe,,2020,30-39,7.6283197
+Europe,,2020,≥40,24.53128
+Europe,,2020,Don't know,14.511458
+High-income countries,,2020,<13,2.473921
+High-income countries,,2020,13-19,24.484507
+High-income countries,,2020,20-29,10.832585
+High-income countries,,2020,30-39,16.975899
+High-income countries,,2020,≥40,16.11568
+High-income countries,,2020,Don't know,29.117413
+Lower-middle-income countries,,2020,<13,8.800553
+Lower-middle-income countries,,2020,13-19,8.485406
+Lower-middle-income countries,,2020,20-29,26.288944
+Lower-middle-income countries,,2020,30-39,8.428943
+Lower-middle-income countries,,2020,≥40,7.3487206
+Lower-middle-income countries,,2020,Don't know,40.647434
+Upper-middle-income countries,,2020,<13,6.5811706
+Upper-middle-income countries,,2020,13-19,14.341692
+Upper-middle-income countries,,2020,20-29,16.935555
+Upper-middle-income countries,,2020,30-39,18.964176
+Upper-middle-income countries,,2020,≥40,18.10031
+Upper-middle-income countries,,2020,Don't know,25.077103
+World,OWID_WRL,2020,<13,7.5053473
+World,OWID_WRL,2020,13-19,11.454613
+World,OWID_WRL,2020,20-29,22.213495
+World,OWID_WRL,2020,30-39,12.515957
+World,OWID_WRL,2020,≥40,11.407292
+World,OWID_WRL,2020,Don't know,34.903294
