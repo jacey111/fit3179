@@ -1,0 +1,85 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Global Medication Usage for Anxiety and Depression in 2020",
+        "fontSize": 18,
+        "font": "Verdana",  
+        "color": "#333333",
+        "anchor": "middle"
+    },
+    "width": 800,
+    "height": 500,
+    "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",  
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    },
+    "projection": {"type": "equalEarth"},
+    "layer": [
+        {
+            "transform": [
+                {
+                    "calculate": "'Data is not available in ' + datum.properties.NAME",
+                    "as": "note"
+                }
+            ],
+            "mark": {"type": "geoshape", "fill": "#dfdfdf", "stroke": "#7e7e7e", "strokeWidth": 0.5},
+            "encoding": {"tooltip": {"field": "note"}}
+        },
+        {
+            "transform": [
+                {
+                    "lookup": "properties.NAME",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/jacey111/fit3179/refs/heads/main/dealt-with-anxiety-depression-took-prescribed-medication.csv",
+                            "format": {"type": "csv"}
+                        },
+                        "key": "Entity",
+                        "fields": ["Share - Question: mh8d - Took prescribed medication when anxious/depressed - Answer: Yes - Gender: all - Age group: all"]
+                    },
+                    "default": null
+                },
+                {
+                    "calculate": "datum.properties.NAME == 'United States of America' ? 'United States' : datum.properties.NAME == 'Democratic Republic of the Congo' ? 'Congo' : datum.properties.NAME",
+                    "as": "adjustedCountry"
+                },
+                {
+                    "lookup": "adjustedCountry", 
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/jacey111/fit3179/refs/heads/main/dealt-with-anxiety-depression-took-prescribed-medication.csv",
+                            "format": {"type": "csv"}
+                        },
+                        "key": "Entity",
+                        "fields": ["Share - Question: mh8d - Took prescribed medication when anxious/depressed - Answer: Yes - Gender: all - Age group: all"]
+                    }
+                },
+                {
+                    "calculate": "datum['Share - Question: mh8d - Took prescribed medication when anxious/depressed - Answer: Yes - Gender: all - Age group: all']",
+                    "as": "MedicationUsage"
+                },
+                {
+                    "calculate": "format(datum.MedicationUsage, '.2f') + '%'",
+                    "as": "MedicationUsagePercent"
+                }
+            ],
+            "mark": {"type": "geoshape", "stroke": "#7e7e7e", "strokeWidth": 0.5},
+            "encoding": {
+                "color": {
+                    "field": "MedicationUsage",
+                    "type": "quantitative",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], 
+                        "range": ["#f7fbff", "#ebf3fb", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"]
+                    },
+                    "legend": {"title": "Medication Usage (%)"}
+                },
+                "tooltip": [
+                    {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+                    {"field": "MedicationUsagePercent", "type": "nominal", "title": "Medication Usage"}
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Prevalence of Mental Disorders",
+        "fontSize": 14,
+        "font": "Verdana",  
+        "color": "#333333",
+        "offset": 20
+    },
+    "width": 350,
+    "height": 350,
+    "data": {
+        "url": "https://raw.githubusercontent.com/jacey111/fit3179/refs/heads/main/Mental-illnesses-prevalence-Malaysia-2021.csv", 
+        "format": {"type": "csv"}
+    },
+    "transform": [
+        {
+            "calculate": "parseFloat(datum.Percentage) * 10", 
+            "as": "PercentageParsed"
+        },
+        {
+            "calculate": "datum.Disorder + ' : ' + datum.PercentageParsed + '%'", 
+            "as": "TooltipContent"
+        }
+    ],
+    "mark": {"type": "arc", "innerRadius": 50, "stroke": "#fff"},
+    "encoding": {
+        "theta": {"field": "PercentageParsed", "type": "quantitative"},
+        "color": {
+            "field": "Disorder",
+            "type": "nominal",
+            "scale": {
+                "domain": ["Schizophrenia", "Depressive disorders", "Anxiety disorders", "Bipolar disorder", "Eating disorders", "Others"],
+                "range": ["#f2b3b3", "#a3c2e7", "#b2d8b2", "#fce5a2", "#d0bbe5", "#cccccc"]
+            },
+            "legend": {"title": "Disorder"}
+        },
+        "tooltip": {
+            "field": "TooltipContent",
+            "type": "nominal",
+            "title": null
+        }
+    },
+    "view": {"stroke": null}
+}

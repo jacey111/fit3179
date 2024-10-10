@@ -1,0 +1,49 @@
+* {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 36px;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr {
+    color: #bcbcbc;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 3%;
+    text-align: left;
+}
+
+.main {
+    padding: 1% 5% 5% 5%;
+}
+
+.chart {
+    padding-top: 3%;
+}
+
+.mid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#stackedbar {
+    flex: 0 1 80%;
+    padding-bottom: 3%;
+}
+
+#text {
+    flex: 0 1 20%; 
+    padding-right: 2%;
+}

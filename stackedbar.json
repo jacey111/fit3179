@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Age at First Experience of Anxiety or Depression",
+        "fontSize": 18,
+        "font": "Verdana",  
+        "color": "#333333",
+        "offset": 20,
+        "anchor": "middle"
+    },
+    "width": 600,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/jacey111/fit3179/refs/heads/main/age-when-first-had-anxiety-depression.csv", 
+        "format": {"type": "csv"}
+    },
+    "transform": [
+        {
+            "lookup": "Age Group",
+            "from": {
+                "data": {
+                    "values": [
+                        {"Age Group": "<13", "rank": 1},
+                        {"Age Group": "13-19", "rank": 2},
+                        {"Age Group": "20-29", "rank": 3},
+                        {"Age Group": "30-39", "rank": 4},
+                        {"Age Group": "≥40", "rank": 5},
+                        {"Age Group": "Unspecified", "rank": 6}
+                    ]
+                },
+                "key": "Age Group",
+                "fields": ["rank"]
+            }
+        }, 
+        {
+            "calculate": "format(datum['Percentage (%)'], '.2f') + '%'",
+            "as": "PercentageWithSymbol"
+        }
+    ],
+    "mark": {
+        "type": "bar",
+        "tooltip": true
+    },
+    "encoding": {
+        "y": {
+            "field": "Entity", 
+            "type": "nominal",
+            "title": "Country/Region"
+        },
+        "x": {
+            "field": "Percentage (%)",
+            "type": "quantitative",
+            "title": "Percentage (%)",
+            "stack": "normalize",
+            "axis": {
+                "format": ".0%", 
+                "labelExpr": "datum.value * 100"  
+            } 
+        },
+        "color": {
+            "field": "Age Group",  
+            "type": "nominal",
+            "title": "Age Group",
+            "scale": {
+                "domain": ["<13", "13-19", "20-29", "30-39", "≥40", "Unspecified"],
+                "range": ["#a5cfe2", "#ffe2a7", "#b6e3b3", "#b8aadf", "#f7b9a5", "#e0e0e0"]
+            },
+            "legend": {
+                "title": null,
+                "orient": "top",
+                "direction": "horizontal",
+                "labelAlign": "left",
+                "labelBaseline": "middle",
+                "labelLimit": 0
+            }
+        },
+        "order": {
+            "field": "rank", 
+            "type": "quantitative"
+        },
+        "tooltip": [
+            {"field": "Entity", "type": "nominal", "title": "Country/Region"},
+            {"field": "Age Group", "type": "nominal", "title": "Age Group"},
+            {
+                "field": "PercentageWithSymbol",
+                "type": "nominal", 
+                "title": "Percentage"
+            }
+        ]
+    },
+    "config": {
+        "bar": {"binSpacing": 2},
+        "view": {"stroke": null}
+    }
+}
