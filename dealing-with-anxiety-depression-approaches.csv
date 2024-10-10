@@ -1,2 +1,9 @@
-﻿Entity,Code,Year,Engaged in religious/spiritual activities,Improved healthy lifestyle behaviors,Made a change to work situation,Made a change to personal relationships,Talked to friends or family,Took prescribed medication,Spent time in nature/the outdoors,Talked to mental health professional
-Malaysia,MYS,2020,68.6238,77.49396,59.835167,60.341454,82.908806,27.11038,82.919014,24.742746
+﻿Entity,Code,Year,Approach,Percentage
+Malaysia,MYS,2020,Engaged in religious/spiritual activities,68.6238
+Malaysia,MYS,2020,Improved healthy lifestyle behaviors,77.49396
+Malaysia,MYS,2020,Made a change to work situation,59.835167
+Malaysia,MYS,2020,Made a change to personal relationships,60.341454
+Malaysia,MYS,2020,Talked to friends or family,82.908806
+Malaysia,MYS,2020,Took prescribed medication,27.11038
+Malaysia,MYS,2020,Spent time in nature/the outdoors,82.919014
+Malaysia,MYS,2020,Talked to mental health professional,24.742746
