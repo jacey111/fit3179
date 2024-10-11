@@ -1,14 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Age at First Experience of Anxiety or Depression",
-        "fontSize": 18,
-        "font": "Verdana",  
-        "color": "#333333",
-        "offset": 20,
-        "anchor": "middle"
-    },
-    "width": 600,
+    "title": null,
+    "width": 700,
     "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/jacey111/fit3179/refs/heads/main/age-when-first-had-anxiety-depression.csv", 
@@ -63,7 +56,7 @@
             "title": "Age Group",
             "scale": {
                 "domain": ["<13", "13-19", "20-29", "30-39", "≥40", "Unspecified"],
-                "range": ["#a5cfe2", "#ffe2a7", "#b6e3b3", "#b8aadf", "#f7b9a5", "#e0e0e0"]
+                "range": ["#2b8ea2", "#ffb347", "#3c8c40", "#785dac", "#935b4e", "#acacac"]
             },
             "legend": {
                 "title": null,

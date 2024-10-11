@@ -1,12 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Global Medication Usage for Anxiety and Depression in 2020",
-        "fontSize": 18,
-        "font": "Verdana",  
-        "color": "#333333",
-        "anchor": "middle"
-    },
+    "title": null,
     "width": 800,
     "height": 500,
     "data": {
@@ -24,6 +18,20 @@
             ],
             "mark": {"type": "geoshape", "fill": "#dfdfdf", "stroke": "#7e7e7e", "strokeWidth": 0.5},
             "encoding": {"tooltip": {"field": "note"}}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+                "format": {"type": "topojson", "feature": "oceans"}
+            },
+            "mark": {"type": "geoshape", "fill": "#9fc5e8"}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+                "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+            },
+            "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
         },
         {
             "transform": [
@@ -71,9 +79,17 @@
                     "scale": {
                         "type": "threshold",
                         "domain": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], 
-                        "range": ["#f7fbff", "#ebf3fb", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"]
+                        "range": ["#fff5f0", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#63090c", "#3d0007"]
                     },
-                    "legend": {"title": "Medication Usage (%)"}
+                    "legend": {
+                        "title": "Medication Usage (%)",
+                        "orient": "top-right",
+                        "direction": "horizontal",
+                        "labelLimit": 0,
+                        "offset": 10,
+                        "titleAnchor": "start",
+                        "titleOrient": "left"
+                    }
                 },
                 "tooltip": [
                     {"field": "properties.NAME", "type": "nominal", "title": "Country"},

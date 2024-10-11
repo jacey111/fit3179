@@ -1,14 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Approaches to Dealing with Anxiety and Depression",
-        "fontSize": 14,
-        "font": "Verdana",  
-        "color": "#333333",
-        "offset": 20
-    },
-    "width": 350,
-    "height": 350,
+    "title": null,
+    "width": 250,
+    "height": 250,
     "data": {
         "url": "https://raw.githubusercontent.com/jacey111/fit3179/refs/heads/main/dealing-with-anxiety-depression-approaches.csv", 
         "format": {"type": "csv"}
@@ -27,7 +21,7 @@
             "field": "Approach",
             "type": "nominal",
             "scale": {
-                "range": ["#d4a5a5", "#f6d6ac", "#c3e3cb", "#d7bce5", "#c3cde5", "#e0c3ab", "#c9e3e3", "#e2b4b4"]
+                "range": ["#a64444", "#f19c38", "#5c7a8a", "#9a6fae", "#7389c1", "#b8753d", "#6fb6b6", "#4b3061"]
             },
             "legend": {
                 "title": "Approach",

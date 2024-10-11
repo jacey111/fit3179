@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mental Health</title>
+  <title>Mental Health Insights</title>
 
   <link rel="stylesheet" href="main.css">
 
@@ -16,32 +16,71 @@
 </head>
 
 <body>
-  <div class="main">
+  <div class="img-bg">
     <h1>Mental Health Insights</h1>
+  </div>
 
-    <p>
-      Mental health can affect a person's day-to-day life, relationships, and physical health. External factors in people's lives and relationships can also contribute to their mental well-being.
-      In 2020, the number of people living with anxiety and depressive disorders rose significantly because of the COVID-19 pandemic.  
-    </p>
-
-    <div id="map" class="chart"></div><hr><hr>
-
-    <div class="mid-container">
-      <div id="stackedbar" class="chart"></div>
-
-      <div id="text">
-        <p>
-          Mental health disorders affect individuals across all ages, but the age at which these challenges first manifest can vary widely based on geographical, socio-economic, and cultural factors. Early identification of anxiety or depression is crucial, as they can significantly impact personal development, educational attainment, and overall quality of life. 
-        </p>
-      </div>
-    </div><hr><hr>
-
+  <div class="main">
     <h3>
-      A Glimpse into Mental Health in Malaysia: Prevalence of Disorders and Coping Mechanisms
-    </h3>
-    
-    <div id="donut" class="chart"></div>
-    <div id="radial" class="chart"></div>
+      Global Medication Usage for Anxiety and Depression in 2020
+    </h3><hr>
+    <div id="map" class="chart"></div>
+
+    <div class="textbox">
+      <p>
+        Mental health can affect a person's day-to-day life, relationships, and physical health. External factors in people's lives and relationships can also contribute to their mental well-being.
+        In <b>2020</b>, the number of people living with <b>anxiety</b> and <b>depressive disorders</b> rose significantly because of the <i><a href="https://en.wikipedia.org/wiki/COVID-19_pandemic">COVID-19 pandemic</a></i>.  
+      </p>
+    </div>
+  </div>
+
+  <div class="main">
+    <h3>
+      Age at First Experience of Anxiety or Depression
+    </h3><hr>
+    <div id="stackedbar" class="chart"></div>
+
+    <div class="textbox">
+      <p>
+        The <b>most common</b> age group for the first experience of anxiety or depression is between <b>20-29 years old</b>. 
+        Regionally, this trend is particularly evident in <b>lower-middle-income countries</b> and <b>Europe</b>, where <b>younger</b> onset is more prevalent. 
+        Conversely, in <b>high-income countries</b> and <b>upper-middle-income countries</b>, <b>older</b> age groups (30 and above) show a higher occurrence.
+      </p>
+    </div>
+  </div>
+
+  <div id="sub-title" class="main">
+    <h2>
+      A Glimpse into Mental Health in <span style="color: #ad3232;">Malaysia</span>: Prevalence of Disorders and Coping Approaches
+    </h2>
+  </div>
+
+  <div id="side-container">
+    <div id="sidebyside" class="main">
+      <h3>
+        Prevalence of Mental Disorders
+      </h3><hr>
+      <div id="donut" class="chart"></div>
+    </div>
+  
+    <div id="sidebyside" class="main">
+      <h3>
+        Coping Approaches
+      </h3><hr>
+      <div id="radial" class="chart"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      Created by: Jace Ang
+    </p>
+    <p>
+      Last modified: 12 October 2024
+    </p>
+    <p>
+      Source: <a href="https://ourworldindata.org">Our World in Data</a>
+    </p>
   </div>
 </body>
 </html>
