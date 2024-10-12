@@ -30,57 +30,69 @@
             "as": "PercentageWithSymbol"
         }
     ],
-    "mark": {
-        "type": "bar",
-        "tooltip": true
-    },
-    "encoding": {
-        "y": {
-            "field": "Entity", 
-            "type": "nominal",
-            "title": "Country/Region"
-        },
-        "x": {
-            "field": "Percentage (%)",
-            "type": "quantitative",
-            "title": "Percentage (%)",
-            "stack": "normalize",
-            "axis": {
-                "format": ".0%", 
-                "labelExpr": "datum.value * 100"  
-            } 
-        },
-        "color": {
-            "field": "Age Group",  
-            "type": "nominal",
-            "title": "Age Group",
-            "scale": {
-                "domain": ["<13", "13-19", "20-29", "30-39", "≥40", "Unspecified"],
-                "range": ["#2b8ea2", "#ffb347", "#3c8c40", "#785dac", "#935b4e", "#acacac"]
+    "layer": [
+        {
+            "mark": {
+                "type": "bar",
+                "tooltip": true
             },
-            "legend": {
-                "title": null,
-                "orient": "top",
-                "direction": "horizontal",
-                "labelAlign": "left",
-                "labelBaseline": "middle",
-                "labelLimit": 0
+            "encoding": {
+                "y": {
+                    "field": "Entity", 
+                    "type": "nominal",
+                    "title": "Country/Region"
+                },
+                "x": {
+                    "field": "Percentage (%)",
+                    "type": "quantitative",
+                    "title": "Percentage (%)",
+                    "stack": "normalize",
+                    "axis": {
+                        "format": ".0%", 
+                        "labelExpr": "datum.value * 100"  
+                    } 
+                },
+                "color": {
+                    "field": "Age Group",  
+                    "type": "nominal",
+                    "title": "Age Group",
+                    "scale": {
+                        "domain": ["<13", "13-19", "20-29", "30-39", "≥40", "Unspecified"],
+                        "range": ["#2b8ea2", "#ffb347", "#3c8c40", "#785dac", "#935b4e", "#acacac"]
+                    },
+                    "legend": {
+                        "title": null,
+                        "orient": "top",
+                        "direction": "horizontal",
+                        "labelAlign": "left",
+                        "labelBaseline": "middle",
+                        "labelLimit": 0
+                    }
+                },
+                "order": {
+                    "field": "rank", 
+                    "type": "quantitative"
+                },
+                "tooltip": [
+                    {"field": "Entity", "type": "nominal", "title": "Country/Region"},
+                    {"field": "Age Group", "type": "nominal", "title": "Age Group"},
+                    {
+                        "field": "PercentageWithSymbol",
+                        "type": "nominal", 
+                        "title": "Percentage"
+                    }
+                ]
             }
         },
-        "order": {
-            "field": "rank", 
-            "type": "quantitative"
-        },
-        "tooltip": [
-            {"field": "Entity", "type": "nominal", "title": "Country/Region"},
-            {"field": "Age Group", "type": "nominal", "title": "Age Group"},
-            {
-                "field": "PercentageWithSymbol",
-                "type": "nominal", 
-                "title": "Percentage"
+        {
+            "mark": {"type": "text", "align": "left", "dx": 0, "dy": 20, "fontSize": 12, "color": "#424242"},
+            "encoding": {
+              "x": {"value": 0},  
+              "y": {"value": 430}, 
+              "text": {"value": "Note: 'Unspecified' refers to respondents who either did not provide an age or refused to answer."}
             }
-        ]
-    },
+          }
+    ],
     "config": {
         "bar": {"binSpacing": 2},
         "view": {"stroke": null}

@@ -17,23 +17,51 @@
             "as": "TooltipContent"
         }
     ],
-    "mark": {"type": "arc", "innerRadius": 50, "stroke": "#fff"},
-    "encoding": {
-        "theta": {"field": "PercentageParsed", "type": "quantitative"},
-        "color": {
-            "field": "Disorder",
-            "type": "nominal",
-            "scale": {
-                "domain": ["Schizophrenia", "Depressive disorders", "Anxiety disorders", "Bipolar disorder", "Eating disorders", "Others"],
-                "range": ["#e59400", "#5a9bd4", "#66a566", "#a56936", "#8a67c9", "#888888"]
-            },
-            "legend": {"title": "Disorder"}
+    "layer": [
+        {
+            "mark": {"type": "arc", "innerRadius": 50, "stroke": "#fff"},
+            "encoding": {
+                "theta": {"field": "PercentageParsed", "type": "quantitative"},
+                "color": {
+                    "field": "Disorder",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": ["Schizophrenia", "Depressive disorders", "Anxiety disorders", "Bipolar disorder", "Eating disorders", "Others"],
+                        "range": ["#e59400", "#5a9bd4", "#66a566", "#a56936", "#8a67c9", "#888888"]
+                    },
+                    "legend": {"title": "Disorder"}
+                },
+                "tooltip": {
+                    "field": "TooltipContent",
+                    "type": "nominal",
+                    "title": null
+                }
+            }
         },
-        "tooltip": {
-            "field": "TooltipContent",
-            "type": "nominal",
-            "title": null
-        }
-    },
+        {
+            "mark": {"type": "text", "align": "center", "dx": 200, "dy": 40, "fontSize": 12, "color": "black"},
+            "encoding": {
+                "text": {"value": "Anxiety and depression"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "center", "dx": 200, "dy": 50, "fontSize": 12, "color": "black"},
+            "encoding": {
+                "text": {"value": "disorders are the major"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "center", "dx": 200, "dy": 60, "fontSize": 12, "color": "black"},
+            "encoding": {
+                "text": {"value": "mental health challenges"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "center", "dx": 200, "dy": 70, "fontSize": 12, "color": "black"},
+            "encoding": {
+                "text": {"value": "in Malaysia."}
+            }
+        }     
+    ],
     "view": {"stroke": null}
 }

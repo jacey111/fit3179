@@ -3,6 +3,11 @@
     "title": null,
     "width": 800,
     "height": 500,
+    "config": {
+        "view": {
+            "stroke": null 
+        }
+    },
     "data": {
         "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",  
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -96,6 +101,80 @@
                     {"field": "MedicationUsagePercent", "type": "nominal", "title": "Medication Usage"}
                 ]
             }
+        },
+        {
+            "mark": {"type": "rule", "stroke": "black", "strokeWidth": 1},
+            "encoding": {
+                "x": {"value": 396},  
+                "y": {"value": 105}, 
+                "x2": {"value": 333}, 
+                "y2": {"value": 133}  
+            }
+        },
+        {
+            "mark": {"type": "rule", "stroke": "black", "strokeWidth": 1},
+            "encoding": {
+                "x": {"value": 465}, 
+                "y": {"value": 175},  
+                "x2": {"value": 540},  
+                "y2": {"value": 238}  
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "color": "black"},
+            "encoding": {
+                "x": {"datum": 290, "type": "quantitative", "axis": null},  
+                "y": {"datum": 355, "type": "quantitative", "axis": null},
+                "text": {"value": "Highest"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "color": "black"},
+            "encoding": {
+                "x": {"datum": 264, "type": "quantitative", "axis": null},  
+                "y": {"datum": 345, "type": "quantitative", "axis": null},
+                "text": {"value": "Medication Usage"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "color": "black"},
+            "encoding": {
+                "x": {"datum": 285, "type": "quantitative", "axis": null},  
+                "y": {"datum": 335, "type": "quantitative", "axis": null},
+                "text": {"value": "at 76.72%"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "color": "black"},
+            "encoding": {
+                "x": {"datum": 536, "type": "quantitative", "axis": null}, 
+                "y": {"datum": 250, "type": "quantitative", "axis": null}, 
+                "text": {"value": "Lowest"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "color": "black"},
+            "encoding": {
+                "x": {"datum": 510, "type": "quantitative", "axis": null}, 
+                "y": {"datum": 240, "type": "quantitative", "axis": null}, 
+                "text": {"value": "Medication Usage"}
+            }
+        },
+        {
+            "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "color": "black"},
+            "encoding": {
+                "x": {"datum": 531, "type": "quantitative", "axis": null}, 
+                "y": {"datum": 230, "type": "quantitative", "axis": null}, 
+                "text": {"value": "at 15.96%"}
+            }
         }
-    ]
+    ],
+    "encoding": {
+        "x": {
+            "scale": {"domain": [0, 800]}  
+        },
+        "y": {
+            "scale": {"domain": [0, 500]} 
+        }
+    }
 }
