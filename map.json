@@ -53,7 +53,7 @@
                     "default": null
                 },
                 {
-                    "calculate": "datum.properties.NAME == 'United States of America' ? 'United States' : datum.properties.NAME == 'Democratic Republic of the Congo' ? 'Congo' : datum.properties.NAME",
+                    "calculate": "datum.properties.NAME == 'United States of America' ? 'United States' : datum.properties.NAME == 'Dem. Rep. Congo' ? 'Dominican Republic' : datum.properties.NAME",
                     "as": "adjustedCountry"
                 },
                 {
